@@ -28,7 +28,13 @@ public class FeignNativeApplication implements CommandLineRunner {
                         200,
                         Headers.of("Content-Type", "application/json"),
                         """
-                                {"id": "id1", "name": "name1"}
+                                {
+                                "id": "id1",
+                                "name": "name1",
+                                "sets": ["set1", "set2"],
+                                "lists": ["list1", "list2", "list3"],
+                                "maps": {"key1": "value1"}
+                                }
                                 """));
         server.start();
         try {
